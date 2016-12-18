@@ -1,5 +1,16 @@
 # angular2-test-directions
 
+##Entrega
+Se entregan las paths obligatorias y la Broken White Path.
+
+En esta última utilizo el localStorage para almacenar el like del producto en el navegador y añado un campo likes a cada producto para llevar la cuenta de los likes. No me ha terminado de quedar fino, pero si se prueba con distintos navegadores se puede dar de alta más de un like y también para productos vendidos.
+
+--
+--
+--
+
+#Texto original de la práctica
+
 **Whatapop** es un _amago_ de clon de [Wallapop](http://es.wallapop.com). Sus pretensiones son mucho más humildes que las del conocido portal, pero a la vez contribuyen a una grandiosa causa: que aprendas a familiarizarte con HTML5, CSS3 y Angular.
 
 Lee detenidamente estas instrucciones **hasta el final**, las vas a necesitar para completar la práctica.
