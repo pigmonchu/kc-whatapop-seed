@@ -1,5 +1,9 @@
 <div *ngIf="data">
     <img [src]="data.photos[0]" class="thumbnail" />
+    <div class="megusta"  [class.tiene]="data.likes>0" [class.notiene]="!data.likes || data.likes === 0">
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+        <span *ngIf="data.likes || data.likes > 0" class="cuantos">{{data.likes}}</span>
+    </div>
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
     | Green Path                                                       |

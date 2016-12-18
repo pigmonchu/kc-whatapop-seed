@@ -12,6 +12,7 @@ export class Product {
         public publishedDate: number,
         public state: string,
         public price: number,
+        public likes: number,
         public photos: string[]) { }
 
     static fromJson(json: any): Product {
@@ -24,6 +25,7 @@ export class Product {
             +json.publishedDate,
             json.state,
             +json.price,
+            +json.likes,
             json.photos
         );
     }

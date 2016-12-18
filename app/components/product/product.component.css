@@ -1,0 +1,19 @@
+.megusta {
+    padding: 0 5px;
+    width: 100%;
+    font-size: 0.8em;
+    margin-top:-12px;
+    margin-bottom: 12px;
+}
+
+.megusta.tiene {
+    color: #2199E8;
+}
+
+.megusta.notiene {
+    color: #999;
+}
+
+.megusta > .cuantos {
+    float: right;
+}

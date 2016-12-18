@@ -4,3 +4,24 @@
     padding-top: 28px;
     margin-bottom: 20px;
 }
+
+.like {
+    font-size: 0.4em;
+    display: inline-block;
+    padding: 3px 10px;
+    color: white;
+    margin-top: 9px;
+    float: right;
+    background-color: #2199E8;
+}
+
+i.info {
+    color: #2199E8;
+}
+i.disabled {
+    color: #999;
+}
+.like.disabled {
+    background-color: #999;
+    color: #777;
+}

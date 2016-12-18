@@ -28,11 +28,12 @@
         "avatar": "images/jaxm2mrc1k4zwn5y.jpg"
       },
       "publishedDate": 1461103200000,
-      "state": "selling",
+      "state": "sold",
       "price": 59.9,
       "photos": [
         "images/9r1om3iqfhwqyc9y.jpg"
-      ]
+      ],
+      "likes": 1
     },
     {
       "id": "2",
@@ -52,7 +53,8 @@
       "price": 32.96,
       "photos": [
         "images/pga6sj6a7qh46yry.jpg"
-      ]
+      ],
+      "likes": 1
     },
     {
       "id": 3,
@@ -152,7 +154,8 @@
       "price": 55,
       "photos": [
         "images/xv8q2f7d2mde3htz.jpg"
-      ]
+      ],
+      "likes": 1
     },
     {
       "id": 8,
@@ -232,7 +235,8 @@
       "price": 16.74,
       "photos": [
         "images/wpj2tpu8vfguqwhn.jpg"
-      ]
+      ],
+      "likes": 2
     },
     {
       "id": 12,
@@ -288,11 +292,12 @@
         "avatar": "images/vuvp3t7rhk26byad.jpg"
       },
       "publishedDate": 1459288800000,
-      "state": "selling",
+      "state": "sold",
       "price": 13.41,
       "photos": [
         "images/oz4i8gqityrhzv93.jpg"
-      ]
+      ],
+      "likes": 2
     },
     {
       "id": 15,
@@ -312,7 +317,8 @@
       "price": 14.28,
       "photos": [
         "images/cw4t2tej37duxrfs.jpg"
-      ]
+      ],
+      "likes": 2
     },
     {
       "id": 16,
@@ -452,7 +458,8 @@
       "price": 4.74,
       "photos": [
         "images/7b3vcg4rk89za28r.jpg"
-      ]
+      ],
+      "likes": 1
     },
     {
       "id": 23,
@@ -472,7 +479,8 @@
       "price": 4.74,
       "photos": [
         "images/91kzxg1jdyne3p88.jpg"
-      ]
+      ],
+      "likes": 1
     },
     {
       "id": 24,

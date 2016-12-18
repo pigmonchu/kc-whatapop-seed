@@ -93,6 +93,13 @@ console.log(filter);
                    .map((data: Response): Product => Product.fromJson(data.json()));
     }
 
+    likeProduct(productId: number, likes: number): Observable<Product> {
+        let body: any = { "likes": likes };
+        return this._http
+                   .patch(`${this._backendUri}/products/${productId}`, body)
+                   .map((data: Response): Product => Product.fromJson(data.json()));
+    }
+
     setProductAvailable(productId: number): Observable<Product> {
         let body: any = { "state": "selling" };
         return this._http

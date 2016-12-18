@@ -3,7 +3,21 @@
         <img [src]="getImageSrc()" class="thumbnail" />
     </div>
     <div class="medium-8 columns">
-        <h3>{{ _product.name }}</h3>
+        <h3 class="h3">
+            {{ _product.name }} 
+            <span class="like"  
+                  [ngClass]="{'disabled': meGusta()}"
+                  (click) = "addLike()">
+                Me gusta
+                <span class="fa-stack">
+                    <i class="fa fa-circle fa-stack-2x info" 
+                       [ngClass]="{'disabled': meGusta()}">
+                    </i>
+                    <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
+                </span>
+            </span>
+        </h3>
+
         <p>
             <span class="label" [ngClass]="{
                 'info': _product.category.id === 1,
