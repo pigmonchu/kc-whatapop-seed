@@ -16,6 +16,7 @@ export class ProductService {
 
     getProducts(filter: ProductFilter = undefined): Observable<Product[]> {
 
+/**
         /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
         | Pink Path                                                        |
         |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
@@ -27,7 +28,7 @@ export class ProductService {
         | igualmente. La querystring debe tener estos parámetros:          |
         |                                                                  |
         |   _sort=publishedDate&_order=DESC                                |
-        |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
 
         /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
         | Red Path                                                         |
@@ -43,7 +44,7 @@ export class ProductService {
         |       q=x (siendo x el texto)                                    |
         |   - Búsqueda por categoría:                                      |
         |       category.id=x (siendo x el identificador de la categoría)  |
-        |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
 
         /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
         | Yellow Path                                                      |
@@ -57,8 +58,9 @@ export class ProductService {
         |                                                                  |
         |   - Búsqueda por estado:                                         |
         |       state=x (siendo x el estado)                               |
-        |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
+        |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+*/
+console.log(filter);
         let filterUrl:string = "";
 
         if (filter && filter.category) {
@@ -67,6 +69,10 @@ export class ProductService {
 
         if (filter && filter.text) {
             filterUrl+=`&q=${filter.text}`;
+        }
+
+        if (filter && filter.state) {
+            filterUrl+= `&state=${filter.state}`;
         }
 
         return this._http
