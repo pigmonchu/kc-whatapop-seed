@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter} from "@angular/core";
 
 import { Product } from "../../models/product";
 
@@ -9,6 +9,12 @@ import { Product } from "../../models/product";
 export class ProductComponent {
 
     @Input() data: Product;
+
+    @Output() productSelected: EventEmitter<Product> = new EventEmitter<Product>();
+
+    showDetail(data: Product): void {
+        this.productSelected.emit(data);
+    }
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
     | Green Path                                                       |

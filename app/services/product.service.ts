@@ -59,8 +59,18 @@ export class ProductService {
         |       state=x (siendo x el estado)                               |
         |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+        let filterUrl:string = "";
+
+        if (filter && filter.category) {
+            filterUrl+=`&category.id=${filter.category}`;
+        }
+
+        if (filter && filter.text) {
+            filterUrl+=`&q=${filter.text}`;
+        }
+
         return this._http
-                   .get(`${this._backendUri}/products`)
+                   .get(`${this._backendUri}/products?_sort=publishedDate&_order=DESC${filterUrl}`)
                    .map((data: Response): Product[] => Product.fromJsonToList(data.json()));
     }
 

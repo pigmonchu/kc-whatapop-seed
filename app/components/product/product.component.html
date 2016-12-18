@@ -20,11 +20,14 @@
         class="button expanded"
         [class.success]="data.state === 'selling'"
         [class.secondary]="data.state === 'sold'">
-        <span *ngIf="data.state === 'selling'">
-            Comprar por {{ data.price }} €
+        <span *ngIf="data.state === 'selling'"
+              (click)="showDetail(data)">
+            Comprar por {{ data.price | number: '1.2-2' | DecimalToComma }} €
         </span>
-        <span *ngIf="data.state === 'sold'">
+        <span *ngIf="data.state === 'sold'"
+              (click)="showDetail(data)">
             Ver detalles
         </span>
     </button>
 </div>
+    

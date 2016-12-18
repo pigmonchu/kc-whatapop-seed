@@ -19,7 +19,8 @@
             | fecha de publicación.                                            |
             |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-            <span>Publicado {{ _product.publishedDate }}</span>
+            <small data-tooltip aria-haspopup="true" class="has-tip" title="{{ _product.publishedDate | date:'dd-MMM-yyyy' }}">Publicado {{ _product.publishedDate | PublicationDatePipe }}</small>
+
         </p>
         <p [innerHtml]="_product.description"></p>
         <user-profile [userId]="_product.seller.id"></user-profile>
@@ -35,7 +36,7 @@
         <button
             *ngIf="_product.state === 'selling'"
             (click)="showPurchaseWarning()"
-            class="button large expanded">Comprar por {{ _product.price }} €</button>
+            class="button large expanded">Comprar por {{ _product.price | number: '1.2-2' | DecimalToComma }} €</button>
         <button
             (click)="goBack()"
             class="warning button expanded">Volver</button>

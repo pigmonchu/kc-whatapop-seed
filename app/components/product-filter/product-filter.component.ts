@@ -1,9 +1,12 @@
-import { Component, EventEmitter, OnInit, OnDestroy, Output } from "@angular/core";
+import { Component, EventEmitter, OnInit, OnDestroy, Output, Input} from "@angular/core";
 import { Subscription } from "rxjs/Rx";
 
 import { Category } from "../../models/category";
 import { CategoryService } from "../../services/category.service";
 import { ProductFilter } from "../../models/product-filter";
+
+import { Product } from "../../models/product";
+
 
 @Component({
     selector: "product-filter",
@@ -11,6 +14,8 @@ import { ProductFilter } from "../../models/product-filter";
     styleUrls: ["./app/components/product-filter/product-filter.component.css"]
 })
 export class ProductFilterComponent implements OnInit, OnDestroy {
+
+    @Input() data: Product;
 
     @Output() onSearch: EventEmitter<ProductFilter> = new EventEmitter();
     private _productFilter: ProductFilter = {};
